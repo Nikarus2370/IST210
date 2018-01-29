@@ -68,7 +68,7 @@ public class DataTypes {
 		
 		System.out.print("Enter a String: ");
 		myString = input.nextLine();
-		System.out.printf("String = %s\n", myString);
+		System.out.printf("\nString = %s\n", myString);
 		
 		System.out.print("Enter a Boolean: ");
 		myBool = input.nextBoolean();
