@@ -1,0 +1,43 @@
+
+public class Invoice {
+	
+	private String partNumber;
+	private String description;
+	private int quantity;
+	private double price;
+	
+	public Invoice(String partNumber, String description, int quantity, double price){
+		this.partNumber = partNumber;
+		this.description = description;
+		this.quantity = quantity;
+		this.price = price;
+	}
+	
+	public void setPartNumber(String partNumber){
+		this.partNumber = partNumber;
+	}
+	public String getPartNumber(){
+		return this.partNumber;
+	}
+	
+	public void setDescrption(String descrption){
+		this.description = descrption;
+	}
+	public String getDescription(){
+		return this.description;
+	}
+	
+	public void setQuantity(int quantity){
+		this.quantity = quantity;
+	}
+	public int getQuantity(){
+		return this.quantity;
+	}
+		
+	public void setPrice(double price){
+		this.price = price;
+	}
+	public double getPrice(){
+		return this.price;
+	}
+}
