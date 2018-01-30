@@ -14,14 +14,3 @@ public class CircleMath {
 		input.close();
 	}
 }
-
-
-/*
-
-Enter radius: 8
-Radius: 8
-Diameter: 16.00
-Circumference: 50.27
-Area: 201.06
-
-*/

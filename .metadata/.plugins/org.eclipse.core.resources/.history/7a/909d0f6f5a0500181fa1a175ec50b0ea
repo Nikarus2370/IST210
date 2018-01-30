@@ -43,35 +43,3 @@ public class InvoiceTest {
 		System.out.println("\n");
 	}
 }
-
-
-/*
-
-Output
-
-
-Original Invoice
-Part number: 1234
-Description: Hammer
-Quantity: 2
-Price: $14.95
-Invoice Amount: $29.90
-
-
-Updated invoice information
-Part number: 001234
-Description: Yellow Hammer
-Quantity: 3
-Price: $19.49
-Invoice Amount: $58.47
-
-
-With negative quantity and negative price
-Part number: 001234
-Description: Yellow Hammer
-Quantity: 0
-Price: $0.00
-Invoice Amount: $0.00
-
-
-*/
