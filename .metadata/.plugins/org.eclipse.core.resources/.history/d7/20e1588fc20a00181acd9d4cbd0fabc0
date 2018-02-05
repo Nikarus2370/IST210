@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+
+public class CoinConversion {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		int number = 1;
+		int dollars;
+		int quarters;
+		int dimes;
+		int nickels;
+		int pennies;
+		
+		while(true){
+			number = 0;
+			dollars = 0;
+			quarters = 0;
+			dimes = 0;
+			nickels = 0;
+			pennies = 0;
+			
+			
+			System.out.print("Please enter pennies: ");
+			number = input.nextInt();
+			if(number == 0)
+			{
+				System.out.print("Closing");
+				break;
+			}
+			System.out.print("Original amount: " + number);
+			dollars = number % 100;
+			if (dollars > 0)
+			{
+				number = number - dollars * 100;
+			}
+			quarters = number % 25;
+			if(quarters > 0)
+			{
+				number = number - quarters * 25;
+			}
+			dimes = dimes % 10;
+			if(dimes > 0)
+			{
+				number = number - dimes * 10;
+			}
+			quarters = number % 25;
+			if(nickels > 0)
+			{
+				number = number - nickels * 5;
+			}
+			quarters = number % 25;
+			if(pennies > 0)
+			{
+				number = number - pennies;
+			}
+			
+			System.out.print("Number of Dollars: " + dollars);
+			System.out.print("Number of Quarters: " + quarters);
+			System.out.print("Number of Dimes: " + dimes);
+			System.out.print("Number of Nickels: " + nickels);
+			System.out.print("Number of Pennies: " + pennies);
+		}
+	}
+
+}
