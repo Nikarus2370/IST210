@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class PlayWithWager {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		Status status;
+		double balance = 20000.0;
+		Print("Game has started\n");
+		Print("Would you like to play a game of Craps? [Y|N]: ");
+		do{
+			do{
+				char i = input.next().charAt(0);
+				if(i == 'y' || i == 'Y')
+				{
+					status = Status.PLAY;
+					break;
+				}
+				else if (i == 'n' || i == 'N')
+				{
+					status = Status.QUIT;
+					Print("Well why are you even bothering to "
+							+ "load up the game if you don't want to play?\n");
+					break;
+				}
+				else
+				{
+					Print("\nPlease enter a valid letter [Y|N]:");
+				}
+			}while(true);
+			
+			if(status == Status.PLAY)
+			{
+				Print("Enter a wager less than your balance, or -1 to quit. Your"
+						+ "balance is ");
+				System.out.printf("$%,.2f", balance);
+				Print(" : ");
+				do{
+					double wager = input.nextDouble();
+					if(wager == -1)
+					{
+						status = Status.QUIT;
+						break;
+					}
+					else if (wager < -1)
+					{
+						Print("Please enter a positive value for your bet, or -1 to quit")
+					}
+					else if (wager > balance)
+					{
+						Print("Enter a wager less than your balance, or -1 to quit. Your"
+								+ "balance is ");
+						System.out.printf("$%,.2f", balance);
+						Print(" : ");
+					}
+					else
+					{
+						break;
+					}
+				}while(true);
+			}
+			
+		}while(status != Status.QUIT);
+		PrintLn("Quitting the game...");
+	}
+	
+	public static void Print(String str)
+	{
+		System.out.print(str);
+	}
+	
+	public static void PrintLn(String str)
+	{
+		System.out.println(str);
+	}
+
+}

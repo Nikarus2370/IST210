@@ -1,0 +1,22 @@
+
+public class Diamond {
+
+	public static void main(String[] args) {
+		for(int i = 0; i < 9; i++)
+		{
+			for(int j = 0; j < 9; j++)
+			{
+				if(5 > Math.abs(j-i) && 0 < j + i)
+				{
+					System.out.print('*');
+				}
+				else
+				{
+					System.out.print(' ');
+				}
+			}
+			System.out.println();
+		}
+	}
+
+}
