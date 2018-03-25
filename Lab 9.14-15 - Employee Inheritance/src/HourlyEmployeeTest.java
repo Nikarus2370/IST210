@@ -82,7 +82,7 @@ public class HourlyEmployeeTest {
 		 	      System.out.printf("%n%s:%n%n%s%n", 
 		 	         "Updated employee3 information obtained by toString", 
 		 	         employee3.toString());
-	   } // end main
+	   }
 }
 
 
@@ -147,4 +147,3 @@ hours worked: 54
 total earnings: 472.75
 
   */
- */
