@@ -1,0 +1,29 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		try
+		{
+			someMethod();
+		}
+		catch(Exception exception)
+		{
+			System.err.println(exception);
+		}
+	}
+
+	public static void someMethod() throws Exception{
+		try
+		{
+			someMethod2();
+		}
+		catch(Exception exception){
+			throw new Exception("Exception in someMethod", exception);
+		}
+	}
+	public static void someMethod2() throws Exception{
+		throw new Exception("Exception in someMethod2");
+	}
+}
