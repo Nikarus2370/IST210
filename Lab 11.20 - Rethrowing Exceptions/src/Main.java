@@ -39,4 +39,3 @@ Caused by: java.lang.Exception: Exception in someMethod2
 	at Main.someMethod(Main.java:20)
 	... 1 more
 */
- */
