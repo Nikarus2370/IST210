@@ -161,7 +161,7 @@ public class PersonMain {
 	public static void displayMenu()
 	{
 		Println("");
-		Println("Persion Directory");
+		Println("Person Directory");
 		Println("1.\tFind a person by last name");
 		Println("2.\tDisplay all persons");
 		Println("3.\tDisplay count of persons in the directory");
@@ -186,3 +186,238 @@ public class PersonMain {
 	}
 
 }
+
+/*1)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 1
+Please enter a last name: adams
+Found        Henry Adams        Age: 63
+
+Press any key to continue
+
+2)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 1
+Please enter a last name: jacob
+Can't find jacob
+
+Press any key to continue
+
+3)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 2
+  1)        Patty Evans        Age: 24
+  2)     Lorraine Smith        Age: 37
+  3)          Tom Yee          Age: 43
+  4)        Henry Adams        Age: 63
+  5)         Sato Hashimoto    Age: 21
+  6)        Henry Stimson      Age: 29
+  7)         Jose Velasquez    Age: 72
+  8)        Henry Lamarque     Age: 54
+  9)         Minh Vang         Age: 54
+ 10)      Lucinda Creswell     Age: 18
+
+Press any key to continue
+
+4)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 3
+There are 10 persons in the directory.
+Press any key to continue
+
+5)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 4
+Insert: Please enter the first name: John
+Insert: Please enter the last name: Jacob
+Insert: Please enter the age: 32
+Person John Jacob 32 entered successfully.
+Person count is 11
+Press any key to continue
+
+6)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 5
+Delete: Please enter the last name: Yee
+Successfully deleted "Yee"
+Press any key to continue
+
+7)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 5
+Delete: Please enter the last name: Richardson
+Not Found. Could not delete "Richardson"
+Press any key to continue
+
+8)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 6
+  1)        Henry Adams        Age: 63
+  2)      Lucinda Creswell     Age: 18
+  3)        Patty Evans        Age: 24
+  4)         Sato Hashimoto    Age: 21
+  5)         John Jacob        Age: 32
+  6)        Henry Lamarque     Age: 54
+  7)     Lorraine Smith        Age: 37
+  8)        Henry Stimson      Age: 29
+  9)         Minh Vang         Age: 54
+ 10)         Jose Velasquez    Age: 72
+
+Press any key to continue
+
+9)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 7
+All records deleted from the directory
+Person count is 0
+Press any key to continue
+
+10)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 2
+Person directory is empty
+
+Press any key to continue
+
+11)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 8
+  1)        Patty Evans        Age: 24
+  2)     Lorraine Smith        Age: 37
+  3)          Tom Yee          Age: 43
+  4)        Henry Adams        Age: 63
+  5)         Sato Hashimoto    Age: 21
+  6)        Henry Stimson      Age: 29
+  7)         Jose Velasquez    Age: 72
+  8)        Henry Lamarque     Age: 54
+  9)         Minh Vang         Age: 54
+ 10)      Lucinda Creswell     Age: 18
+Person count is 10
+Press any key to continue
+
+12)
+Person Directory
+1.	Find a person by last name
+2.	Display all persons
+3.	Display count of persons in the directory
+4.	Insert a person
+5.	Delete a person
+6.	Sort persons and update the person directory
+7.	Delete all person from the directory
+8.	Re-populate the directory
+9.	Quit
+-----------------------
+Enter your selection [1-9]: 9
+
+Goodbye...
+*/
