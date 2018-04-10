@@ -56,6 +56,35 @@ public class DataArray {
 		}
 	}
 	
+	public Person getPersonByIndex(int index)
+	{
+		if(index >= 0 && index < nElems)
+		{
+			return arr[index];
+		}
+		else
+		{
+			return null;
+		}
+	}
+	
+	public String[] getAllPersons()
+	{
+		if(nElems > 0)
+		{
+			String[] str = new String[nElems];
+			for(int i = 0; i < nElems; i++)
+			{
+				str[i] = arr[i].toString();
+			}
+			return str;
+		}
+		else
+		{
+			return "Person directory is empty";
+		}
+	}
+
 	public void insert(String last, String first, int age) 
 	{
 		arr[nElems] = new Person(last, first, age);
