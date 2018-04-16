@@ -50,7 +50,8 @@ public class MenuFrame extends JFrame{
 					@Override
 		            public void actionPerformed(ActionEvent event)
 		            {
-						
+						updateList();
+						personList.setListData(arr.getAllPersons());
 		            } 
 				}
 			);
@@ -62,7 +63,8 @@ public class MenuFrame extends JFrame{
 					@Override
 		            public void actionPerformed(ActionEvent event)
 		            {
-						
+						sort();
+						personList.setListData(arr.getAllPersons());
 		            } 
 				}
 			);
@@ -74,7 +76,8 @@ public class MenuFrame extends JFrame{
 					@Override
 		            public void actionPerformed(ActionEvent event)
 		            {
-						
+						deleteAll();
+						personList.setListData(arr.getAllPersons());
 		            } 
 				}
 			);
@@ -86,7 +89,9 @@ public class MenuFrame extends JFrame{
 					@Override
 		            public void actionPerformed(ActionEvent event)
 		            {
-						
+						int i = personList.getSelectedIndex();
+						deletePerson(i);
+						personList.setListData(arr.getAllPersons());
 		            } 
 				}
 			);
@@ -98,7 +103,8 @@ public class MenuFrame extends JFrame{
 					@Override
 		            public void actionPerformed(ActionEvent event)
 		            {
-						
+						addPerson();
+						personList.setListData(arr.getAllPersons());
 		            } 
 				}
 			);
@@ -128,32 +134,62 @@ public class MenuFrame extends JFrame{
 		
 		this.add(personList, BorderLayout.LINE_START);
 		this.add(buttonsPanel, BorderLayout.LINE_END);
-		this.add(statusLabel, BorderLayout.PAGE_END)
+		this.add(statusLabel, BorderLayout.PAGE_END);
 	}
 	
 	public void updateList()
 	{
-		
+		arr.populateArray();
+		statusLabel.setText("Populating array");
+
 	}
 	
 	public void deleteAll()
 	{
-		
+		arr.deleteAllPersons();
+		statusLabel.setText("Clearing array");
 	}
 	
-	public void deletePerson()
+	public void deletePerson(int i)
 	{
-		
+		if (i == -1)
+		{
+			statusLabel.setText("Index -1 not found for user, delete failed");
+		}
+		else
+		{
+			Person per = arr.findByIndex(i);
+			String last = per.lastName;
+			boolean b = arr.deleteByIndex(i);
+			
+			if(b) 
+			{
+				String str = String.format("%s has successfully been deleted", last);
+				statusLabel.setText(str);
+			}
+			else 
+			{
+				statusLabel.setText("Error has occurred");
+			}
+		}
 	}
 	
 	public void sort()
 	{
-		
+		arr.BubbleSort();
+		statusLabel.setText("Sorting the array");
 	}
 	
 	public void addPerson()
 	{
+		String first = JOptionPane.showInputDialog("Enter first name:");
+		String last = JOptionPane.showInputDialog("Enter last name:");
+		String ageStr = JOptionPane.showInputDialog("Enter age:");
+		int age = Integer.parseInt(ageStr);
+		arr.insert(last, first, age);
 		
+		String str = String.format("User %s %s added successfully", first, last);
+		statusLabel.setText(str);
 	}
 	
 	

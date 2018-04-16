@@ -126,6 +126,6 @@ public class Person implements Comparable<Person> {
 	@Override
 	public String toString()
 	{
-		return String.format("%12s %-12s Age: $3d", firstName, lastName, age);
+		return String.format("%12s %-12s Age: %3d", firstName, lastName, age);
 	}
 }

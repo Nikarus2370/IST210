@@ -8,5 +8,6 @@ public class PersonMain {
 		arr.populateArray();
 		
 		MenuFrame menu = new MenuFrame(arr);
+		menu.setVisible(true);
 	}
 }

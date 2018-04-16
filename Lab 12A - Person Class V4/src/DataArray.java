@@ -56,6 +56,18 @@ public class DataArray {
 		}
 	}
 	
+	public Person findByIndex(int i)
+	{
+		if (nElems == 0)
+		{
+			return null;
+		}
+		else
+		{
+			return arr[i];
+		}
+	}
+	
 	public Person getPersonByIndex(int index)
 	{
 		if(index >= 0 && index < nElems)
@@ -81,7 +93,9 @@ public class DataArray {
 		}
 		else
 		{
-			return "Person directory is empty";
+			String[] str = new String[1];
+			str[0] = "Person directory is empty";
+			return str;
 		}
 	}
 
@@ -104,6 +118,23 @@ public class DataArray {
 		}
 		
 		if (i == nElems)
+		{
+			return false;
+		}
+		else
+		{
+			for(int j = i; j < nElems; j++) 
+			{
+				arr[j] = arr[j + 1];
+			}
+			this.nElems--;
+			return true;
+		}
+	}
+	
+	public boolean deleteByIndex(int i)
+	{
+		if	(nElems == 0)
 		{
 			return false;
 		}
